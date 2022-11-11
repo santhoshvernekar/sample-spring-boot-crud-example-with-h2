@@ -23,6 +23,9 @@ Also, recently added **Spring Reactive programming** support with the help of **
 - Postman (or any RESTful API testing tool)
 
 
+- Swagger can be launched in Browser: http://localhost:9010/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config 
+- H2 Console On Browser: http://localhost:9010/h2-console
+- 
 <br/>
 
 
@@ -114,7 +117,7 @@ Or
      springdoc.swagger-ui.path=/swagger-ui-custom.html 
      ```
 
-Swagger in Browser can be launched: http://localhost:9010/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config   
+Swagger can be launched in Browser: http://localhost:9010/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config   
 
 H2 Console On Browser: http://localhost:9010/h2-console
 
