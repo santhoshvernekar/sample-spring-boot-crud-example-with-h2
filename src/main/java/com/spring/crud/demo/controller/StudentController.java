@@ -53,7 +53,7 @@ public class StudentController {
     @GetMapping("/all/salaries/{salaryGreaterThan}")
     public StudentList getStudentBySalaryGreaterThan(@PathVariable int salaryGreaterThan) {
         StudentList studentList = new StudentList();
-        studentList.items = studentService.getStudentBySalaryGreaterThan(salary);
+        studentList.items = studentService.getStudentBySalaryGreaterThan(salaryGreaterThan);
         return studentList;
     }
 
