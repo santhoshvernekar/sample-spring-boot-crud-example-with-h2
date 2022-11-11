@@ -43,7 +43,7 @@ Or
 
 ||
 |  ---------    |
-| **_Note_** : In `SpringBootH2CRUDApplication.java` class we have autowired both SportsIcon, Student and Employee repositories. <br/>If there is no record present in DB for any one of that module class (SportsIcon, Student and Employee), static data is getting inserted in DB from `HelperUtil.java` class when we are starting the app for the first time.| 
+| **_Note_** : In `SpringBootH2CRUDApplication.java` class we have autowired both SportsIcon, Student and Employee repositories. <br/>If there is no record present in DB for any one of that module class (SportsIcon, Student and Employee), static data is getting inserted in DB from `UtilityHelper.java` class when we are starting the app for the first time.| 
 
 
 
