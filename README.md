@@ -139,7 +139,7 @@ H2 Console On Browser: http://localhost:9010/h2-console
         private String specialName;
         private String profession;
         private int age;
-        private boolean canFly;
+        private boolean olampian;
     
         // Constructor, Getter and Setter
     }
@@ -344,7 +344,7 @@ H2 Console On Browser: http://localhost:9010/h2-console
        
     ```
     @RestController
-    @RequestMapping("/reactive/super-hero")
+    @RequestMapping("/reactive/sports-icon")
     public class ReactiveSportsIconController {
            
         @GetMapping(path = "/", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
@@ -435,41 +435,41 @@ H2 Console On Browser: http://localhost:9010/h2-console
 ### API Endpoints
 
 - #### Sports Man CRUD Operations
-    > **GET Mapping** http://localhost:9010/super-hero  - Get all Sports Manes
+    > **GET Mapping** http://localhost:9010/sports-icon  - Get all Sports Manes
     
-    > **GET Mapping** http://localhost:9010/super-hero/1  - Get Sports Man by ID
+    > **GET Mapping** http://localhost:9010/sports-icon/1  - Get Sports Man by ID
        
-    > **POST Mapping** http://localhost:9010/super-hero  - Add new Sports Man in DB  
+    > **POST Mapping** http://localhost:9010/sports-icon  - Add new Sports Man in DB  
     
      Request Body  
      ```
         {
-            "name": "Tony",
-            "specialName": "Iron Man",
-            "profession": "Business",
-            "age": 50,
-            "canFly": true
+            "name": "Kohli",
+            "specialName": "King Kohli",
+            "profession": "Cricket",
+            "age": 33,
+            "olampian": false
         }
      ```
     
-    > **PUT Mapping** http://localhost:9010/super-hero/3  - Update existing Sports Man for given ID 
+    > **PUT Mapping** http://localhost:9010/sports-icon/3  - Update existing Sports Man for given ID 
                                                        
      Request Body  
      ```
         {
             "id": "3"
-            "name": "Tony",
-            "specialName": "Iron Man",
-            "profession": "Business",
-            "age": 50,
-            "canFly": true
+            "name": "Kohli",
+            "specialName": "King Kohli",
+            "profession": "Cricket",
+            "age": 33,
+            "olampian": false
         }
      ```
     
-    > **DELETE Mapping** http://localhost:9010/super-hero/4  - Delete Sports Man by ID
+    > **DELETE Mapping** http://localhost:9010/sports-icon/4  - Delete Sports Man by ID
 
 - #### Reactive Sports Man CRUD Operations
-    > ###### **GET Mapping** http://localhost:9010/reactive/super-hero  - Get all Sports Manes 
+    > ###### **GET Mapping** http://localhost:9010/reactive/sports-icon  - Get all Sports Manes 
     
      ## **(Try above endpoint in Chrome to see magic, Postman currently not supporting reactive programming)**
     
@@ -480,11 +480,11 @@ H2 Console On Browser: http://localhost:9010/h2-console
      Request Body  
      ```
         {
-            "name": "Tony",
-            "specialName": "Iron Man",
-            "sports": "Business",
-            "age": 50,
-            "canFly": true
+             "name": "Kohli",
+             "specialName": "King Kohli",
+             "profession": "Cricket",
+             "age": 33,
+             "olampian": false
         }
      ```
     
@@ -494,11 +494,11 @@ H2 Console On Browser: http://localhost:9010/h2-console
      ```
         {
             "id": "3"
-            "name": "Tony",
-            "specialName": "Iron Man",
-            "sports": "Business",
-            "age": 50,
-            "canFly": true
+            "name": "Kohli",
+            "specialName": "King Kohli",
+            "profession": "Cricket",
+            "age": 33,
+            "olampian": false
         }
      ```
     
@@ -521,5 +521,4 @@ H2 Console On Browser: http://localhost:9010/h2-console
         "marks": 1000
     }
     ``` 
-
 
