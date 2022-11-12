@@ -43,7 +43,7 @@ For Ex: Code Coverage of StudentController looks like this:
 
 
 ###  Build and Run application
-_GOTO >_ **~/absolute-path-to-directory/spring-boot-h2-crud**  
+_GOTO >_ **~/absolute-path-to-directory/sample-spring-boot-crud-example-with-h2**  
 and try below command in terminal
 > **```mvn spring-boot:run```** it will run application as spring boot application
 
@@ -307,7 +307,7 @@ H2 Console On Browser: http://localhost:9010/h2-console
     #   
    
    
-4. #### CRUD operation for Sports Manes
+4. #### CRUD operation for Sports Icon
 
     In **SportsIconController.java** class, 
     we have exposed 5 endpoints for basic CRUD operations
