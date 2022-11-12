@@ -17,8 +17,12 @@ import java.net.URI;
 @RequestMapping("/sport-icons")
 public class SportsIconController {
 
-    @Autowired
     private SportsIconService sportsIconService;
+
+    @Autowired
+    public SportsIconController(SportsIconService service) {
+        this.sportsIconService = service;
+    }
 
     @LogObjectAfter
     @GetMapping
@@ -41,9 +45,9 @@ public class SportsIconController {
     public ResponseEntity<SportsIcon> save(@RequestBody SportsIcon sportsIcon) {
         SportsIcon savedSportsIcon = sportsIconService.save(sportsIcon);
         URI uri = ServletUriComponentsBuilder.fromCurrentContextPath()
-        		.path("/{id}")
-        		.buildAndExpand(savedSportsIcon.getId())
-        		.toUri();
+                .path("/{id}")
+                .buildAndExpand(savedSportsIcon.getId())
+                .toUri();
         return ResponseEntity.created(uri).body(savedSportsIcon);
     }
 

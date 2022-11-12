@@ -11,5 +11,4 @@ public interface StudentRepository extends JpaRepository<Student, Integer> {
 
     List<Student> findByFirstNameLike(String firstName);
 
-
 }

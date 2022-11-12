@@ -14,8 +14,12 @@ import reactor.core.publisher.Mono;
 @RequestMapping("/reactive/sport-icons")
 public class ReactiveSportsIconController {
 
-    @Autowired
     private ReactiveSportsIconService reactiveSportsIconService;
+
+    @Autowired
+    public ReactiveSportsIconController(ReactiveSportsIconService service) {
+        this.reactiveSportsIconService = service;
+    }
 
     @Operation(summary = "Try this endpoint in chrome, postman doesn't support for reactive programming")
     @GetMapping(produces = MediaType.TEXT_EVENT_STREAM_VALUE)

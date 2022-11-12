@@ -88,6 +88,21 @@
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.5</version>
+                <configuration>
+                    <rules>
+                        <rule implementation="org.jacoco.maven.RuleConfiguration">
+                            <element>BUNDLE</element>
+                            <limits>
+                                <limit implementation="org.jacoco.report.check.Limit">
+                                    <counter>INSTRUCTION</counter>
+                                    <value>COVEREDRATION</value>
+                                    <minimun>0.80</minimun>
+
+                                </limit>
+                            </limits>
+                        </rule>
+                    </rules>
+                </configuration>
                 <executions>
                     <execution>
                         <id>default-prepare-agent</id>

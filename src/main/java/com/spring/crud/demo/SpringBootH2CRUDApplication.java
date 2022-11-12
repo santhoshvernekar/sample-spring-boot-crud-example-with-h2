@@ -4,8 +4,8 @@ import com.spring.crud.demo.model.SportsIcon;
 import com.spring.crud.demo.model.Student;
 import com.spring.crud.demo.model.emp.Employee;
 import com.spring.crud.demo.repository.EmployeeRepository;
+import com.spring.crud.demo.repository.SportsIconRepository;
 import com.spring.crud.demo.repository.StudentRepository;
-import com.spring.crud.demo.repository.SuperHeroRepository;
 import com.spring.crud.demo.utils.UtilityHelper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +33,7 @@ public class SpringBootH2CRUDApplication {
 	private StudentRepository studentRepository;
 
 	@Autowired
-	private SuperHeroRepository superHeroRepository;
+	private SportsIconRepository sportsIconRepository;
 
 	@Autowired
 	private EmployeeRepository employeeRepository;
@@ -51,10 +51,10 @@ public class SpringBootH2CRUDApplication {
 					log.info("******* Students stored in DB :: {}", students);
 				}
 
-			List<SportsIcon> sportsMEN = superHeroRepository.findAll();
+			List<SportsIcon> sportsMEN = sportsIconRepository.findAll();
 			if (sportsMEN.isEmpty()) {
 				log.info("******* Inserting Sports Manes to DB *******");
-				superHeroRepository.saveAll(UtilityHelper.sportIconsSupplier.get());
+				sportsIconRepository.saveAll(UtilityHelper.sportIconsSupplier.get());
 			} else {
 				log.info("******* Sports Manes stored in DB Size :: {}", sportsMEN.size());
 				log.info("******* Sports Manes stored in DB :: {}", sportsMEN);

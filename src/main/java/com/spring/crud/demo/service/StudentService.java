@@ -1,9 +1,9 @@
 package com.spring.crud.demo.service;
 
 
-import java.util.List;
-
 import com.spring.crud.demo.model.Student;
+
+import java.util.List;
 
 public interface StudentService {
 	
@@ -19,7 +19,7 @@ public interface StudentService {
 	
 	Student getStudentByLastName(String lastName);
 
-	List<Student> getStudentBySalaryGreaterThan(int salary);
+	List<Student> getStudentByMarksGreaterThan(int marks);
 	
 	List<Student> getStudentByCondition(Student student);
 
