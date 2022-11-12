@@ -51,7 +51,7 @@ or
 > **```mvn clean install```** it will build application and create **jar** file under target directory 
 
 Run jar file from below path with given command
-> **```java -jar ~/path-to-spring-boot-h2-crud/target/spring-boot-h2-crud-0.0.1-SNAPSHOT.jar```**
+> **```java -jar ~/path-to-sample-spring-boot-crud-example-with-h2/target/sample-spring-boot-crud-example-with-h2-1.0.0-SNAPSHOT```**
 
 Or
 > run main method from `SpringBootH2CRUDApplication.java` as spring boot application.  
