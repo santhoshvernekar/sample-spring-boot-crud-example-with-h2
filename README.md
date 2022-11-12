@@ -134,8 +134,51 @@ Swagger can be launched in Browser: http://localhost:9010/swagger-ui/index.html?
 
 H2 Console On Browser: http://localhost:9010/h2-console
 
+3. #### Jacoco Configuration
+    Jacoco plugin is used for getting Code coverage Report, Offcial Documentation [Jacoco](https://www.eclemma.org/jacoco/)  
+
+    **pom.xml**
+     ```
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.5</version>
+                <configuration>
+                    <rules>
+                        <rule implementation="org.jacoco.maven.RuleConfiguration">
+                            <element>BUNDLE</element>
+                            <limits>
+                                <limit implementation="org.jacoco.report.check.Limit">
+                                    <counter>INSTRUCTION</counter>
+                                    <value>COVEREDRATION</value>
+                                    <minimun>0.80</minimun>
+
+                                </limit>
+                            </limits>
+                        </rule>
+                    </rules>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>default-prepare-agent</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>default-report</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+     ```
+
+
    
-3. #### Model class
+4. #### Model class
     Below are the model classes which we will store in H2 DB and perform CRUD operations.  
     **SportsIcon.java**  
     ```
@@ -307,7 +350,7 @@ H2 Console On Browser: http://localhost:9010/h2-console
     #   
    
    
-4. #### CRUD operation for Sports Icon
+5. #### CRUD operation for Sports Icon
 
     In **SportsIconController.java** class, 
     we have exposed 5 endpoints for basic CRUD operations
@@ -442,7 +485,7 @@ H2 Console On Browser: http://localhost:9010/h2-console
 
 
 
-5. #### JPA And Query operation for Employee
+6. #### JPA And Query operation for Employee
     In **StudentController.java** class JPA related operations.
     
  
