@@ -12,8 +12,12 @@ import java.util.List;
 @RequestMapping("/students")
 public class StudentController {
 
-    @Autowired
     private StudentService studentService;
+
+    @Autowired
+    public StudentController(StudentService studentService) {
+        this.studentService = studentService;
+    }
 
     @GetMapping("/say")
     public String sayHello() {
@@ -24,7 +28,6 @@ public class StudentController {
     public List<Student> getAll() {
         return studentService.getAll();
     }
-
 
     @GetMapping("/{rollNo}")
     public Student getStudentById(@PathVariable int rollNo) {
@@ -50,10 +53,10 @@ public class StudentController {
     }
 
 
-    @GetMapping("/all/salaries/{salaryGreaterThan}")
-    public StudentList getStudentBySalaryGreaterThan(@PathVariable int salaryGreaterThan) {
+    @GetMapping("/all/marks/{marksGreaterThan}")
+    public StudentList getStudentByMarksGreaterThan(@PathVariable int marksGreaterThan) {
         StudentList studentList = new StudentList();
-        studentList.items = studentService.getStudentBySalaryGreaterThan(salaryGreaterThan);
+        studentList.items = studentService.getStudentByMarksGreaterThan(marksGreaterThan);
         return studentList;
     }
 
