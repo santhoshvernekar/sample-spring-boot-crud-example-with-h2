@@ -31,6 +31,13 @@ Also, recently added **Spring Reactive programming** support with the help of **
 
 ![image](https://user-images.githubusercontent.com/59571096/201428389-a9428d53-fefb-4122-9138-16160b105610.png)
 
+- Code Coverage: After building the projects you can find code coverage in the target path :- /sample-spring-boot-crud-example-with-h2/target/site/jacoco/index.html
+
+For Ex: Code Coverage of StudentController looks like this:
+
+![image](https://user-images.githubusercontent.com/59571096/201474585-c6608eec-65ea-433d-8295-1a3608474d86.png)
+
+
 
 <br/>
 
