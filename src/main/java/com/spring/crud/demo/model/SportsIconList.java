@@ -12,5 +12,5 @@ import java.util.List;
 @Getter
 @Setter
 public class SportsIconList {
-    public List<SportsIcon> items= new ArrayList<SportsIcon>();
+    public List<SportsIcon> items= new ArrayList<>();
 }

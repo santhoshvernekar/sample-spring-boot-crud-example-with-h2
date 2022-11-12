@@ -10,7 +10,7 @@ public interface EmployeeService {
 
     Employee findById(int id);
 
-    Employee save(Employee superHero);
+    Employee save(Employee sportsIcon);
 
 	Employee update(int id, Employee employee);
 

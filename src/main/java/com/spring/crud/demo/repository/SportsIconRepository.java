@@ -4,6 +4,6 @@ import com.spring.crud.demo.model.SportsIcon;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 
-public interface SuperHeroRepository extends JpaRepository<SportsIcon, Integer> {
+public interface SportsIconRepository extends JpaRepository<SportsIcon, Integer> {
 
 }

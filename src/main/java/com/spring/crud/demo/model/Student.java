@@ -5,7 +5,10 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.io.Serializable;
 
 @Data
@@ -24,5 +27,11 @@ public class Student implements Serializable {
 	private String firstName;
 	private String lastName;
 	private float marks;
-	
+
+	public Student(int rollNo, String firstName, String lastName, float marks) {
+		this.rollNo= rollNo;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.marks = marks;
+	}
 }

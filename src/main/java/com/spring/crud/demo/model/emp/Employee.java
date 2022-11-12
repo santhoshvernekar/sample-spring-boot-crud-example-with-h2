@@ -26,8 +26,8 @@ public class Employee implements Serializable {
     private String lastName;
     private int age;
 
-    @Column(name = "no_of_childrens")
-    private int noOfChildrens;
+    @Column(name = "no_of_children")
+    private int noOfChildren;
     private boolean spouse;
 
     @JsonManagedReference

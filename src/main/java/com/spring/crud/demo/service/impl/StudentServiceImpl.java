@@ -1,14 +1,13 @@
 package com.spring.crud.demo.service.impl;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.spring.crud.demo.model.Student;
+import com.spring.crud.demo.repository.StudentRepository;
+import com.spring.crud.demo.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.spring.crud.demo.repository.StudentRepository;
-import com.spring.crud.demo.service.StudentService;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class StudentServiceImpl implements StudentService {
@@ -67,50 +66,22 @@ public class StudentServiceImpl implements StudentService {
 		return repository.findByFirstNameLike(firstName);
 	}
 
-//	@Override
-//	public Student getStudentByFirstName(Student student) {
-//		List<Student> list = repository.findAll();
-//		for (Student emp : list) {
-//			if (emp.getFirstName().equals(student.getFirstName()))
-//				return emp;
-//		}
-//		return Student.builder().empId(0).firstName("Not Found").lastName("Please enter valid id").salary(0f).build();
-//	}
-//
-//	@Override
-//	public List<Student> getStudentByFrName(Student student) {
-//		List<Student> students = new ArrayList<>();
-//
-//		if (null != student && null != student.getFirstName()
-//				&& !(student.getFirstName().equals(""))) {
-//			List<Student> list = repository.findAll();
-//
-//			for (Student emp : list) {
-//				if (emp.getFirstName().toLowerCase().contains(student.getFirstName().toLowerCase())) {
-//					students.add(emp);
-//				}
-//			}
-//		}
-//		return students;
-//	}
 
 	@Override
-	public List<Student> getStudentBySalaryGreaterThan(int salary) {
+	public List<Student> getStudentByMarksGreaterThan(int marks) {
 		List<Student> students = new ArrayList<>();
 
-		if (salary > 0) {
+		if (marks > 0) {
 			List<Student> list = repository.findAll();
 
 			for (Student emp : list) {
-				if (emp.getMarks() > salary)
+				if (emp.getMarks() > marks)
 					students.add(emp);
 			}
 		}
 		return students;
 	}
 
-	
-	
 	
 	@Override
 	public List<Student> getStudentByCondition(Student student) {

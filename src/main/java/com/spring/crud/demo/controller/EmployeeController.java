@@ -16,9 +16,12 @@ import java.net.URI;
 @RequestMapping("/employees")
 public class EmployeeController {
 
-    @Autowired
     private EmployeeService service;
 
+    @Autowired
+    public EmployeeController(EmployeeService service) {
+        this.service = service;
+    }
 
     @LogObjectAfter
     @GetMapping

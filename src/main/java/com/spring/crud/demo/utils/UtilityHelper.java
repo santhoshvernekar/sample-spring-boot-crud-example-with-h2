@@ -1,13 +1,14 @@
 package com.spring.crud.demo.utils;
 
+import com.spring.crud.demo.model.SportsIcon;
+import com.spring.crud.demo.model.Student;
+import com.spring.crud.demo.model.emp.Address;
+import com.spring.crud.demo.model.emp.Employee;
+import com.spring.crud.demo.model.emp.PhoneNumber;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Supplier;
-
-import com.spring.crud.demo.model.SportsIcon;
-import com.spring.crud.demo.model.emp.*;
-import com.spring.crud.demo.model.emp.Employee;
-import com.spring.crud.demo.model.Student;
 
 public class UtilityHelper {
 
@@ -53,7 +54,7 @@ public class UtilityHelper {
 				.firstName("Santhosh")
 				.lastName("Vernekar")
 				.age(30)
-				.noOfChildrens(0)
+				.noOfChildren(0)
 				.spouse(true)
 				.address(Address.builder()
 						.id(1)
@@ -81,35 +82,35 @@ public class UtilityHelper {
 
 
 
-		Employee aryan = Employee.builder()
+		Employee virat = Employee.builder()
 				.id(1)
-				.firstName("Aryan")
-				.lastName("Ghadage")
+				.firstName("Virat")
+				.lastName("Kohli")
 				.age(28)
-				.noOfChildrens(0)
+				.noOfChildren(0)
 				.spouse(true)
 				.address(Address.builder()
 						.id(1)
-						.streetAddress("A road")
-						.city("Pune")
-						.state("Maharashtra")
+						.streetAddress("Delhi Road")
+						.city("Bangalore")
+						.state("Karnataka")
 						.country("India")
-						.postalCode("411018")
+						.postalCode("560010")
 						.build()
 				)
-				.hobbies(Arrays.asList("Dancing", "Cooking"))
+				.hobbies(Arrays.asList("Dancing", "Cricket"))
 				.build();
 
 		PhoneNumber aryansNumber = PhoneNumber.builder()
 				.id(1)
 				.type("Mobile")
 				.number("1234555555")
-				.employee(aryan)
+				.employee(virat)
 				.build();
 
-		aryan.setPhoneNumbers(Arrays.asList(aryansNumber));
+		virat.setPhoneNumbers(Arrays.asList(aryansNumber));
 
 
-		return Arrays.asList(santhosh, aryan);
+		return Arrays.asList(santhosh, virat);
 	};
 }

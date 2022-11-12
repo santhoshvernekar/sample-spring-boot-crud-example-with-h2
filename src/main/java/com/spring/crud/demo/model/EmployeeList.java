@@ -12,5 +12,5 @@ import java.util.List;
 @Getter
 @Setter
 public class EmployeeList {
-    public List<Employee> items= new ArrayList<Employee>();
+    public List<Employee> items= new ArrayList<>();
 }

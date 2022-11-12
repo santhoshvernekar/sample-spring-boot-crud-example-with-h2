@@ -4,5 +4,5 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StudentList {
-    public List<Student> items= new ArrayList<Student>();
+    public List<Student> items= new ArrayList<>();
 }

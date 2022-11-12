@@ -28,29 +28,29 @@ public class SportsIconHandler {
 
     public Mono<ServerResponse> findById(ServerRequest serverRequest) {
         int id = Integer.parseInt(serverRequest.pathVariable("id"));
-        Mono<SportsIcon> superHeroMono = reactiveSportsIconService.findById(id);
-        return ServerResponse.ok().body(superHeroMono, SportsIcon.class);
+        Mono<SportsIcon> sportsIconMono = reactiveSportsIconService.findById(id);
+        return ServerResponse.ok().body(sportsIconMono, SportsIcon.class);
     }
 
 
     public Mono<ServerResponse> save(ServerRequest serverRequest) {
-        Mono<SportsIcon> superHero = serverRequest.bodyToMono(SportsIcon.class);
-        Mono<SportsIcon> superHeroMono = reactiveSportsIconService.save(superHero.block());
-        return ServerResponse.ok().body(superHeroMono, SportsIcon.class);
+        Mono<SportsIcon> sportsIcon = serverRequest.bodyToMono(SportsIcon.class);
+        Mono<SportsIcon> sportsIconMono = reactiveSportsIconService.save(sportsIcon.block());
+        return ServerResponse.ok().body(sportsIconMono, SportsIcon.class);
     }
 
 
     public Mono<ServerResponse> update(ServerRequest serverRequest) {
         int id = Integer.parseInt(serverRequest.pathVariable("id"));
-        Mono<SportsIcon> superHero = serverRequest.bodyToMono(SportsIcon.class);
-        Mono<SportsIcon> superHeroMono = reactiveSportsIconService.update(id, superHero.block());
-        return ServerResponse.ok().body(superHeroMono, SportsIcon.class);
+        Mono<SportsIcon> sportsIcon = serverRequest.bodyToMono(SportsIcon.class);
+        Mono<SportsIcon> sportsIconMono = reactiveSportsIconService.update(id, sportsIcon.block());
+        return ServerResponse.ok().body(sportsIconMono, SportsIcon.class);
     }
 
 
     public Mono<ServerResponse> delete(ServerRequest serverRequest) {
         int id = Integer.parseInt(serverRequest.pathVariable("id"));
-        Mono<Void> superHeroMono = reactiveSportsIconService.delete(id);
+        Mono<Void> sportsIconMono = reactiveSportsIconService.delete(id);
         return ServerResponse.ok().body("Deleted successfully...!", String.class);
     }
 

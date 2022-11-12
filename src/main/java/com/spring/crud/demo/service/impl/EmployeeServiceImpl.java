@@ -33,7 +33,6 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public Employee update(int id, Employee employee) {
     	repository.findById(id).orElseThrow(() -> new NotFoundException("** Employee not found for id :: " + id));
-        
     	employee.setId(id);
     	return repository.save(employee);
     }
