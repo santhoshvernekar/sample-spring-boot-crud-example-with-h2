@@ -3,6 +3,8 @@ Demo project for spring-boot-crud operation using JPA with h2 in-memory database
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=san-test&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=san-test)
 [![Coverage Code](https://sonarcloud.io/api/project_badges/measure?project=project=san-test&metric=coverage)](https://sonarcloud.io/dashboard?id=san-test)
+[![Lines Of Code](https://sonarcloud.io/api/project_badges/measure?project=san-test&metric=ncloc)](https://sonarcloud.io/dashboard?id=san-test)
+[![Technical Debit](https://sonarcloud.io/api/project_badges/measure?project=san-test&metric=sqale_index)](https://sonarcloud.io/dashboard?id=san-test)
 
 This project explains CRUD (**C**reate, **R**ead, **U**pdate, **D**elete) operations using spring boot and H2 in-memory database.
 In this app we are using Spring Data JPA for built-in methods to do CRUD operations.     
