@@ -2,8 +2,8 @@
 Demo project for spring-boot-crud operation using JPA with h2 in-memory database
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=san-test&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=san-test)
-[![Coverage Code](https://sonarcloud.io/api/project_badges/measure?project=project=san-test&metric=coverage)](https://sonarcloud.io/dashboard?id=san-test)
-[![Technical Debit](https://sonarcloud.io/api/project_badges/measure?project=san-test&metric=sqale_index)](https://sonarcloud.io/dashboard?id=san-test)
+[![Coverage Code](https://sonarcloud.io/api/project_badges/measure?project=project=san-test&metric=coverage)](https://sonarcloud.io/summary?id=san-test)
+[![Technical Debit](https://sonarcloud.io/api/project_badges/measure?project=san-test&metric=sqale_index)](https://sonarcloud.io/summary?id=san-test)
 [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=san-test&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=san-test)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=san-test&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=san-test)
 
