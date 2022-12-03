@@ -2,10 +2,17 @@
 Demo project for spring-boot-crud operation using JPA with h2 in-memory database
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=san-test&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=san-test)
-[![Coverage Code](https://sonarcloud.io/api/project_badges/measure?project=project=san-test&metric=coverage)](https://sonarcloud.io/summary?id=san-test)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=san-test&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=san-test)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=san-test&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=san-test)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=san-test&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=san-test)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=san-test&metric=bugs)](https://sonarcloud.io/summary/new_code?id=san-test)
 [![Technical Debit](https://sonarcloud.io/api/project_badges/measure?project=san-test&metric=sqale_index)](https://sonarcloud.io/summary?id=san-test)
 [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=san-test&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=san-test)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=san-test&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=san-test)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=san-test&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=san-test)
+
+[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=san-test)](https://sonarcloud.io/summary/new_code?id=san-test)
+[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)](https://sonarcloud.io/summary/new_code?id=san-test)
 
 This project explains CRUD (**C**reate, **R**ead, **U**pdate, **D**elete) operations using spring boot and H2 in-memory database.
 In this app we are using Spring Data JPA for built-in methods to do CRUD operations.     
