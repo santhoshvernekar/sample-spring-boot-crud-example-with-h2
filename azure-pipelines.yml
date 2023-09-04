@@ -22,7 +22,7 @@ steps:
     mavenAuthenticateFeed: true
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
+    goals: 'deploy'
 - task: CopyFiles@2
   inputs:
     Contents: '**'
