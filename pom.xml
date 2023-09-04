@@ -62,6 +62,40 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+<!-- only for Azure DevOps - Used the below tag for feeds -->
+	<repositories>
+	<repository>
+           <id>favacc_feed</id>
+           <url>https://pkgs.dev.azure.com/SenthilAlagarsamy/azartifact/_packaging/favacc_feed/maven/v1</url>
+           <releases>
+              <enabled>true</enabled>
+           </releases>
+           <snapshots>
+              <enabled>true</enabled>
+           </snapshots>
+        </repository>
+	</repositories>
+ 
+ <!-- only for Azure DevOps - Used the below tag for feeds -->
+  <distributionManagement>
+    <repository>
+      <id>favacc_feed</id>
+      <url>https://pkgs.dev.azure.com/SenthilAlagarsamy/azartifact/_packaging/favacc_feed/maven/v1</url>
+      <releases>
+          <enabled>true</enabled>
+      </releases>
+  <snapshots>
+    <enabled>true</enabled>
+  </snapshots>
+</repository>
+    <snapshotRepository>
+      <id>favacc_feed</id>
+      <url>https://pkgs.dev.azure.com/senthilAlagarsamy/azartifact/_packaging/favacc_feed/maven/v1</url>
+      <layout>default</layout>
+      <name>OMD Maven Snapshot Feed</name>
+      <uniqueVersion>true</uniqueVersion>
+    </snapshotRepository>
+   </distributionManagement>
     <build>
         <plugins>
             <plugin>
