@@ -35,4 +35,4 @@ steps:
 - task: PublishCodeCoverageResults@1
   inputs:
     codeCoverageTool: 'Jacoco'
-    summaryFileLocation: '$(System.DefaultWorkingDirectory)/MyApp/src/main/java/'  
+    summaryFileLocation: '$(System.DefaultWorkingDirectory)/sample-spring-boot-crud-example-with-h2/src/main/java/'  
