@@ -35,4 +35,4 @@ steps:
 - task: PublishCodeCoverageResults@1
   inputs:
     codeCoverageTool: 'Jacoco'
-    summaryFileLocation: '$(Build.SourcesDirectory)/coverage/**/*.xml'  
+    summaryFileLocation: '$(System.DefaultWorkingDirectory)/MyApp/src/main/java/'  
