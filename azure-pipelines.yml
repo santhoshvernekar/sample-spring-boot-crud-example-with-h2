@@ -59,7 +59,7 @@ steps:
   displayName: 'Detect Secrets - Gitleaks'
   continueOnError: true
 
-# Run the .jar application
+# Run the springboot application
 - task: CmdLine@2
   inputs:
     script: 'java -jar *.jar'
