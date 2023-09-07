@@ -60,5 +60,5 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'java -jar'
+    script: 'java -jar *.jar'
     workingDirectory: '$(System.ArtifactsDirectory)/drop/target/'
