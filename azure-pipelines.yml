@@ -45,7 +45,7 @@ steps:
 
 - script:
       echo '$(Pipeline.Workspace)/drop'
-      echo '$(System.ArtifactsDirectory)/drop/*.jar'
+      echo '$(System.ArtifactsDirectory)/drop/target/*.jar'
 
 - script: |
       sudo apt update
@@ -57,3 +57,8 @@ steps:
       gitleaks detect --source=. --exit-code 126 --verbose --redact --report-format junit --report-path=$(Common.TestResultsDirectory)/gitleaks
   displayName: 'Detect Secrets - Gitleaks'
   continueOnError: true
+
+- task: CmdLine@2
+  inputs:
+    script: 'java -jar'
+    workingDirectory: '$(System.ArtifactsDirectory)/drop/target/'
