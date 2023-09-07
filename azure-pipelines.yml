@@ -45,7 +45,7 @@ steps:
 
 - script:
       echo '$(Pipeline.Workspace)/drop'
-      echo '$(System.ArtifactsDirectory)'
+      echo '$(System.ArtifactsDirectory)/drop/*.jar'
 
 - script: |
       sudo apt update
