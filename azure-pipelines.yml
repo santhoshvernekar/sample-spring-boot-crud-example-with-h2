@@ -37,8 +37,11 @@ steps:
     codeCoverageTool: 'Jacoco'
     summaryFileLocation: '$(System.DefaultWorkingDirectory)/sample-spring-boot-crud-example-with-h2/src/main/java/'  
 
-- download: current
-    artifact:drop
+- task: DownloadBuildArtifacts@1
+  inputs:
+    buildType: 'current'
+    downloadType: 'specific'
+    downloadPath: '$(System.ArtifactsDirectory)'
 
 - script:
       echo '$(Pipeline.Workspace)\drop'
