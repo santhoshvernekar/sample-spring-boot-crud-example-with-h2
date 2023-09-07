@@ -44,7 +44,8 @@ steps:
     downloadPath: '$(System.ArtifactsDirectory)'
 
 - script:
-      echo '$(Pipeline.Workspace)\drop'
+      echo '$(Pipeline.Workspace)/drop'
+      echo '$(System.ArtifactsDirectory)'
 
 - script: |
       sudo apt update
