@@ -22,7 +22,7 @@ steps:
     mavenAuthenticateFeed: true
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'deploy'
+    goals: 'package'
 - task: CopyFiles@2
   inputs:
     Contents: '**'
@@ -36,6 +36,12 @@ steps:
   inputs:
     codeCoverageTool: 'Jacoco'
     summaryFileLocation: '$(System.DefaultWorkingDirectory)/sample-spring-boot-crud-example-with-h2/src/main/java/'  
+
+- download: current
+    artifact:drop
+
+- script:
+      echo '$(Pipeline.Workspace)\drop'
 
 - script: |
       sudo apt update
