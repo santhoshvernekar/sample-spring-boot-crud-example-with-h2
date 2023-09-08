@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  name: 'MyAgentPool'
+  name: 'salagarsAgentPool1'
   demands:
   - mvn
 
