@@ -1,0 +1,66 @@
+# Maven
+# Build your Java project and run tests with Apache Maven... --
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/java
+
+trigger:
+- main
+
+pool:
+  name: 'salagarsAgentPool1'
+  demands:
+  - mvn
+
+steps:
+- task: Maven@3
+  inputs:
+    mavenPomFile: 'pom.xml'
+    mavenOptions: '-Xmx3072m'
+    javaHomeOption: 'JDKVersion'
+    ##jdkVersionOption: '1.8'
+    ##jdkArchitectureOption: 'x64'
+    mavenAuthenticateFeed: true
+    publishJUnitResults: true
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    goals: 'package'
+- task: CopyFiles@2
+  inputs:
+    Contents: '**'
+    TargetFolder: '$(build.artifactstagingdirectory)'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
+- task: PublishCodeCoverageResults@1
+  inputs:
+    codeCoverageTool: 'Jacoco'
+    summaryFileLocation: '$(System.DefaultWorkingDirectory)/sample-spring-boot-crud-example-with-h2/src/main/java/'  
+
+# Download build artifacts v1
+- task: DownloadBuildArtifacts@1
+  inputs:
+    buildType: 'current'
+    downloadType: 'specific'
+    downloadPath: '$(System.ArtifactsDirectory)'
+
+- script:
+      echo '$(Pipeline.Workspace)'
+      echo '$(System.ArtifactsDirectory)/drop/target/*.jar'
+
+- script: |
+      sudo apt update
+      sudo apt install -y wget
+      wget -qO gitleaks.tar.gz https://github.com/gitleaks/gitleaks/releases/download/v8.17.0/gitleaks_8.17.0_linux_x64.tar.gz
+      tar -xvf gitleaks.tar.gz
+      sudo mv gitleaks /usr/local/bin/
+      rm gitleaks.tar.gz
+      gitleaks detect --source=. --exit-code 126 --verbose --redact --report-format junit --report-path=$(Common.TestResultsDirectory)/gitleaks
+  displayName: 'Detect Secrets - Gitleaks'
+  continueOnError: true
+
+# Run the springboot application
+- task: CmdLine@2
+  inputs:
+    script: 'java -jar *.jar'
+    workingDirectory: '$(System.ArtifactsDirectory)/drop/target/'

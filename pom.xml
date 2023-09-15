@@ -11,14 +11,14 @@
     </parent>
     <groupId>com.spring.crud.demo</groupId>
     <artifactId>sample-spring-boot-crud-example-with-h2</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>2.0.0-SNAPSHOT</version>
     <name>spring-boot-crud-example-with-h2</name>
     <description>Demo project for spring-boot-crud operation using JPA with h2 in-memory database</description>
     <properties>
         <java.version>1.8</java.version>
         <sonar.organization>santhosh-vernekar</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-    </properties
+    </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -62,6 +62,40 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+<!-- only for Azure DevOps - Used the below tag for feeds -->
+	<repositories>
+	<repository>
+           <id>favacc_feed</id>
+           <url>https://pkgs.dev.azure.com/SenthilAlagarsamy/azartifact/_packaging/favacc_feed/maven/v1</url>
+           <releases>
+              <enabled>true</enabled>
+           </releases>
+           <snapshots>
+              <enabled>true</enabled>
+           </snapshots>
+        </repository>
+	</repositories>
+ 
+ <!-- only for Azure DevOps - Used the below tag for feeds -->
+  <distributionManagement>
+    <repository>
+      <id>favacc_feed</id>
+      <url>https://pkgs.dev.azure.com/SenthilAlagarsamy/azartifact/_packaging/favacc_feed/maven/v1</url>
+      <releases>
+          <enabled>true</enabled>
+      </releases>
+  <snapshots>
+    <enabled>true</enabled>
+  </snapshots>
+</repository>
+    <snapshotRepository>
+      <id>favacc_feed</id>
+      <url>https://pkgs.dev.azure.com/senthilAlagarsamy/azartifact/_packaging/favacc_feed/maven/v1</url>
+      <layout>default</layout>
+      <name>OMD Maven Snapshot Feed</name>
+      <uniqueVersion>true</uniqueVersion>
+    </snapshotRepository>
+   </distributionManagement>
     <build>
         <plugins>
             <plugin>
