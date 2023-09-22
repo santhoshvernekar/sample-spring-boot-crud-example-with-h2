@@ -1,6 +1,8 @@
 # sample-spring-boot-crud-example-with-h2 example
 Demo project for spring-boot-crud operation using JPA with h2 in-memory database
 
+[![Build Status](https://dev.azure.com/santoshmv121/sample-project/_apis/build/status%2Fsanthoshvernekar.sample-spring-boot-crud-example-with-h2?branchName=main)](https://dev.azure.com/santoshmv121/sample-project/_build/latest?definitionId=3&branchName=main)
+
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=san-test&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=san-test)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=san-test&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=san-test)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=san-test&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=san-test)
