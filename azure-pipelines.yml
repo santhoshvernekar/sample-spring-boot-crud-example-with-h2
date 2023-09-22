@@ -58,7 +58,7 @@ steps:
   continueOnError: true
 
 # Run the springboot application
-- task: CmdLine@2
-  inputs:
-    script: 'java -jar *.jar'
-    workingDirectory: '$(System.ArtifactsDirectory)/drop/target/'
+# - task: CmdLine@2
+#   inputs:
+#     script: 'java -jar *.jar'
+#     workingDirectory: '$(System.ArtifactsDirectory)/drop/target/'
