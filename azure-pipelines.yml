@@ -15,20 +15,11 @@ steps:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
-    jdkArchitectureOption: 'x64'
+    ##jdkVersionOption: '1.8'
+    ##jdkArchitectureOption: 'x64'
+    mavenAuthenticateFeed: true
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    codeCoverageToolOption: 'JaCoCo'
-    codeCoverageClassFilesDirectories: '$(System.DefaultWorkingDirectory)/**/target/classes/'
-    codeCoverageSourceDirectories: '$(System.DefaultWorkingDirectory)/**/src/main/java/'
-    mavenVersionOption: 'Default'
-    mavenAuthenticateFeed: false
-    effectivePomSkip: false
-    sonarQubeRunAnalysis: true
-    isJacocoCoverageReportXML: true
-    sqMavenPluginVersionChoice: 'latest'
-    checkStyleRunAnalysis: true
     goals: 'package'
 - task: CopyFiles@2
   inputs:
