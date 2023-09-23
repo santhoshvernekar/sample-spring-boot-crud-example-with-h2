@@ -62,3 +62,9 @@ steps:
 #   inputs:
 #     script: 'java -jar *.jar'
 #     workingDirectory: '$(System.ArtifactsDirectory)/drop/target/'
+- task: SonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'SonarCloud'
+    organization: 'san-sample-projects'
+    scannerMode: 'MSBuild'
+    projectKey: 'sample-spring-boot-crud-example-with-h2'
