@@ -68,3 +68,5 @@ steps:
     organization: 'san-sample-projects'
     scannerMode: 'Other'
     projectKey: 'sample-spring-boot-crud-example-with-h2'
+  env:
+      SONAR_TOKEN: $(SONAR_TOKEN)
